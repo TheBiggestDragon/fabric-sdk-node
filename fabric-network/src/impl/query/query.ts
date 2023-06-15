@@ -20,6 +20,8 @@ export interface QueryResponse {
 	payload: Buffer;
 	status: number;
 	message: string;
+	endorser: Buffer;
+	signature: Buffer;
 }
 
 export interface Query {
@@ -113,5 +115,7 @@ function newQueryResponse(endorseResponse: EndorsementResponse): QueryResponse {
 		message: endorseResponse.response.message,
 		payload,
 		status: endorseResponse.response.status,
+		endorser: endorseResponse.response.endorser,
+		signature: endorseResponse.response.signature
 	};
 }
