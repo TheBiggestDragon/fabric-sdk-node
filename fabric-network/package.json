@@ -55,5 +55,7 @@
       "url": "https://github.com/hyperledger/fabric/blob/master/LICENSE"
     }
   ],
-  "devDependencies": {}
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
 }
